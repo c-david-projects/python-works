@@ -2,5 +2,5 @@
 Python-Labs
 
 
-Project using pyscript 
-run in your localhost
+Test Project using pyscript 
+
