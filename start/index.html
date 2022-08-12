@@ -9,10 +9,12 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <link href="css/styles.css" rel="stylesheet" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
         <script src=
         "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        
     </script>
         <style>
            
@@ -32,7 +34,6 @@
                     0% {background-position: 0%}
                     100% {background-position: 100%}
                 }
-           
         </style>
         
     </head>
@@ -76,11 +77,19 @@
                   </py-script></h1>
                   <h2>Your ip is:</h2>
                   <h3 id="gfg"></h3>
+                  <button id="btn" class="btn btn-primary" onclick="playSound()">Play</button>
             </div>
         </div>
         </div>
 
         <script>
+            const btn = document.getElementById('btn')
+            const wrap = document.getElementById('wrap')
+
+            btn.addEventListener('click',function onClick (e){
+                document.body.style.filter = 'blur(150px)';
+            });
+            let playSound = () => new Audio("http://commondatastorage.googleapis.com/codeskulptor-assets/week7-button.m4a").play()
      
             /* Add "https://api.ipify.org?format=json" statement
                        this will communicate with the ipify servers in
