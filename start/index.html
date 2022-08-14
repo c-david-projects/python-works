@@ -76,32 +76,13 @@
                   </py-script></h1>
                   <h2>Your ip is:</h2>
                   <h3 id="gfg"></h3>
+                  <py-script>
+                    print ("hELLO")
+                  </py-script>
                   <button id="btn" class="btn btn-light" onclick="playSound()">Dont Press</button>
             </div>
         </div>
         </div>
-
-        <script>
-            const btn = document.getElementById('btn')
-            const wrap = document.getElementById('wrap')
-
-            btn.addEventListener('click',function onClick (e){
-                document.body.style.filter = 'blur(150px)';
-            });
-            let playSound = () => new Audio("http://commondatastorage.googleapis.com/codeskulptor-assets/week7-button.m4a").play()
-     
-            /* Add "https://api.ipify.org?format=json" statement
-                       this will communicate with the ipify servers in
-                       order to retrieve the IP address $.getJSON will
-                       load JSON-encoded data from the server using a
-                       GET HTTP request */
-                        
-            $.getJSON("https://api.ipify.org?format=json", function(data) {
-                 
-                // Setting text of element P with id gfg
-                $("#gfg").html(data.ip);
-            })
-            </script>
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
