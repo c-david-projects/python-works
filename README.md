@@ -2,5 +2,5 @@
 Python-Labs
 
 
-Test Project using pyscript 
+Test Project using pyscript and javascript
 
