@@ -15,5 +15,34 @@ let playSound = () => new Audio("http://commondatastorage.googleapis.com/codesku
 $.getJSON("https://api.ipify.org?format=json", function(data) {
      
     // Setting text of element P with id gfg
-    $("#gfg").html(data.ip);
+    $("#gfg").html(data.ip);            
+    console.log(data);
 })
+
+
+callWs = function(){
+	// The Endpoint URL
+	let url = 'https://dog.ceo/api/breeds/image/random';
+	fetch(url)
+  .then(function(response) {
+  	// Render the Response Status
+  	document.getElementById('result').innerHTML = response.status;
+    // Parse the body as JSON
+    return response.json();
+  })
+  .then(function(json) {
+  	// Render the parsed body
+  	document.getElementById('result_json').innerHTML = JSON.stringify(json);
+  })
+}
+
+function getDog(){
+  $.getJSON("https://dog.ceo/api/breeds/image/random", function( data ) {
+      $(".breeds-image-random pre").html(JSON.stringify(data, null, 4));
+      $(".image-content").html("<img src='" + data.message + "'>");
+  });
+}
+
+$('.get-dog').click(function(){
+  getDog();
+});

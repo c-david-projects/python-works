@@ -45,7 +45,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"> <button class="get-dog btn btn-light">
+                            DOG
+                            </button></li>
                         <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
@@ -62,8 +64,14 @@
         </nav>
         <!-- Page content-->
         <div class="wrapper">
+            <div class="breeds-image-random pre"></div>
+                <div class="image-content" style="display:flex;margin: auto;background-size: cover;max-width:400px;
+              "> 
         <div class="container">
             <div class="text-center mt-5">
+                
+               </div>
+              
                 <h1><py-script>
                     
                     def PrintText():
@@ -76,10 +84,19 @@
                   </py-script></h1>
                   <h2>Your ip is:</h2>
                   <h3 id="gfg"></h3>
-                  <py-script>
-                    print ("hELLO")
-                  </py-script>
                   <button id="btn" class="btn btn-light" onclick="playSound()">Dont Press</button>
+                  <button class="btn btn-light"  onclick="callWs()">
+                    Json response
+                    </button>
+                    <br/>
+                    <b>Response Status :</b>
+                    <div id="result">
+                    </div>
+                    <br/>
+                    <b>JSON Object :</b>
+                    <div id="result_json">
+                    </div>
+                   
             </div>
         </div>
         </div>
