@@ -11290,5 +11290,8 @@ textarea.form-control-lg {
  img{
   width: 100%;
   height:100%;
-  object-fit:contain;
+}
+
+.obj{
+  object-fit: cover;
 }
