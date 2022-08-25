@@ -39,7 +39,7 @@ callWs = function(){
 function getDog(){
   $.getJSON("https://dog.ceo/api/breeds/image/random", function( data ) {
       $(".breeds-image-random pre").html(JSON.stringify(data, null, 4));
-      $(".image-content").html("<img class="obj" src='" + data.message + "'>");
+      $(".image-content").html("<img class='obj' src='" + data.message + "'>");
   });
 }
 
