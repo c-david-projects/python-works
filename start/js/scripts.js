@@ -1,5 +1,5 @@
 const btn = document.getElementById('btn')
-const wrap = document.getElementById('wrap')
+
 
 btn.addEventListener('click',function onClick (e){
     document.body.style.filter = 'blur(150px)';
